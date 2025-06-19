@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../../django/biblioteca" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../django/crm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../django/django/datacentro" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../django/usuariosdj" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../laravel/guarovision" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../wwwsqldesigner" vcs="Git" />
+  </component>
+</project>
