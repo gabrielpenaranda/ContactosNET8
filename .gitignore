@@ -1,0 +1,132 @@
+# Ignores for .NET (General)
+###########################
+## Build Results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+*.log
+*.pfx
+*.vspscc
+*.vssscc
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+*.builds
+*.pidb
+*.vsp
+*.safetypolicy
+*.webtest
+*.testsettings
+*.trx
+*.local
+
+## NuGet
+*.nupkg
+*.snupkg
+*.swupkg
+/packages/
+/src/packages/ # For older projects or specific setups
+/artifacts/ # Common output folder for CI/CD
+
+## Visual Studio
+.vs/ # Exclude Visual Studio cache folder (recommended)
+# Comment out if you want to include .vs/
+# .vs/config/ # Un-comment to still ignore solution related VS files
+
+## Visual Studio Code
+.vscode/
+
+## Rider
+.idea/ # JetBrains Rider project settings
+*.csproj.user
+*.resharper
+
+## Visual Studio Mobile Development
+# Xamarin
+*.apk
+*.aab
+*.ipa
+*.appx
+*.appxbundle
+*.msi
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## macOS
+.DS_Store
+
+## Linux
+*~
+.#*
+*.swp
+*.bak
+*.orig
+*.rej
+
+###########################
+# ASP.NET Specific Ignores
+###########################
+
+## Web.config/appsettings.json
+# If you have different environment-specific appsettings (e.g., appsettings.Development.json)
+# you might want to version one generic version and ignore the sensitive ones.
+# Example:
+# appsettings*.json # Ignored all appsettings files
+# !appsettings.json # Except the base one
+# !appsettings.Development.json # Or specific ones you want to track
+# For most cases, track all appsettings.json for simplicity.
+# If you have sensitive data, use environment variables or Azure Key Vault.
+
+## wwwroot - Client-side build artifacts (if not managed by NPM/Yarn)
+# Exclude if you build client-side assets (e.g., JS, CSS) into wwwroot,
+# and those assets are sourced from npm_modules/src and compiled.
+# /wwwroot/lib/ # If using libman or similar tools for client-side libraries
+# /wwwroot/css/ # If generated from SCSS/LESS
+# /wwwroot/js/ # If bundled/minified JS
+
+## Node.js (if using client-side build tools like Webpack, Gulp, NPM)
+node_modules/
+npm-debug.log
+yarn-error.log
+.npm/
+
+## Sass/Less (if compiling to CSS)
+.sass-cache/
+.less/
+
+## Other build artifacts / deployment outputs
+/Publish/
+/publish/
+/dist/
+/out/
+*.publishproj
+.deployment
+/web.config # If generated at publish time and not tracked manually
+# Note: Usually you DO want to track web.config in source control
+
+## Docker
+Dockerfile.user
+.dockerignore
+
+## Azure
+.azure/
+
+## Common temporary files
+*.tmp
+*.temp
+temp/
+
+## Data (if you have local SQLite DBs or similar)
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Local settings and user-specific files (Visual Studio, Rider, VS Code)
+*.DotSettings.user # Rider user settings
+*.sln.ide.delete
