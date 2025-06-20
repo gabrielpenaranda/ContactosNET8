@@ -69,7 +69,7 @@ public class InicioController : Controller
         if (ModelState.IsValid)
         {
             // Fecha y hora actual
-            // contacto.FechaCreacion = DateTime.Now;
+            contacto.FechaCreacion = DateTime.Now;
             contacto.FechaActualizacion = DateTime.Now;
             
             _contexto.Contactos.Update(contacto);
@@ -97,6 +97,38 @@ public class InicioController : Controller
         return View(contacto);
     }
     
+    [HttpGet]
+    public IActionResult Borrar(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var contacto = _contexto.Contactos.Find(id);
+        if (contacto == null)
+        {
+            return NotFound();
+        }
+        
+        return View(contacto);
+    }
+    
+    [HttpPost, ActionName("Borrar")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> BorrarContacto(int? id)
+    {
+        var contacto = await _contexto.Contactos.FindAsync(id);
+        if (contacto == null)
+        {
+            return View();
+        }
+        
+        // Borrado
+        _contexto.Contactos.Remove(contacto);
+        await _contexto.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
     
     [HttpGet]
     public IActionResult Privacy()

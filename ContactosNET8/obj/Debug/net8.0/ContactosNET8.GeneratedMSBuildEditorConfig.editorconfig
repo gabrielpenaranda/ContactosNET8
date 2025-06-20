@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/gpg/Code/dotnet/ContactosNET8/ContactosNET8
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/gpg/Code/dotnet/ContactosNET8/ContactosNET8/Views/Inicio/Borrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5pY2lvL0JvcnJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/gpg/Code/dotnet/ContactosNET8/ContactosNET8/Views/Inicio/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5pY2lvL0NyZWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
