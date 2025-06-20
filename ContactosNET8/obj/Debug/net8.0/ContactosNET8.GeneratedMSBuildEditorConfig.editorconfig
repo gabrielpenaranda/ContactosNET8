@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5pY2lvL0NyZWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/gpg/Code/dotnet/ContactosNET8/ContactosNET8/Views/Inicio/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5pY2lvL0RldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/gpg/Code/dotnet/ContactosNET8/ContactosNET8/Views/Inicio/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5pY2lvL0VkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

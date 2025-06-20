@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContactosNET8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ba3ba0a552b169f5b3024ef96a2dd4a299177e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82102a4a2d09660402bd5b2806665e3145ed1631")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContactosNET8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContactosNET8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

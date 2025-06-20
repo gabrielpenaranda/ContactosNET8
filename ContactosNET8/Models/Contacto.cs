@@ -21,4 +21,6 @@ public class Contacto
     public string Email { get; set; }
 
     public DateTime FechaCreacion { get; set; }
+    
+    public DateTime FechaActualizacion { get; set; }
 }

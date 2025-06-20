@@ -35,6 +35,7 @@ public class InicioController : Controller
         {
             // Fecha y hora actual
             contacto.FechaCreacion = DateTime.Now;
+            contacto.FechaActualizacion = DateTime.Now;
             
             _contexto.Contactos.Add(contacto);
             await _contexto.SaveChangesAsync();
@@ -58,7 +59,7 @@ public class InicioController : Controller
             return NotFound();
         }
         
-        return View();
+        return View(contacto);
     }
     
     [HttpPost]
@@ -68,7 +69,8 @@ public class InicioController : Controller
         if (ModelState.IsValid)
         {
             // Fecha y hora actual
-            contacto.FechaCreacion = DateTime.Now;
+            // contacto.FechaCreacion = DateTime.Now;
+            contacto.FechaActualizacion = DateTime.Now;
             
             _contexto.Contactos.Update(contacto);
             await _contexto.SaveChangesAsync();
@@ -76,6 +78,23 @@ public class InicioController : Controller
         }
 
         return View();
+    }
+    
+    [HttpGet]
+    public IActionResult Detalle(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var contacto = _contexto.Contactos.Find(id);
+        if (contacto == null)
+        {
+            return NotFound();
+        }
+        
+        return View(contacto);
     }
     
     
