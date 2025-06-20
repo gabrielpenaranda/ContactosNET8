@@ -14,22 +14,78 @@ public class InicioController : Controller
     {
         _contexto = contexto;
     }
-
+    
+    [HttpGet]
     public async Task<IActionResult> Index()
     {
         return View(await _contexto.Contactos.ToListAsync());
     }
-
+    
+    [HttpGet]
     public IActionResult Crear()
     {
         return View();
     }
+    
+   [HttpPost]
+   [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Crear(Contacto contacto)
+    {
+        if (ModelState.IsValid)
+        {
+            // Fecha y hora actual
+            contacto.FechaCreacion = DateTime.Now;
+            
+            _contexto.Contactos.Add(contacto);
+            await _contexto.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
 
+        return View();
+    }
+    
+    [HttpGet]
+    public IActionResult Editar(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var contacto = _contexto.Contactos.Find(id);
+        if (contacto == null)
+        {
+            return NotFound();
+        }
+        
+        return View();
+    }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Editar(Contacto contacto)
+    {
+        if (ModelState.IsValid)
+        {
+            // Fecha y hora actual
+            contacto.FechaCreacion = DateTime.Now;
+            
+            _contexto.Contactos.Update(contacto);
+            await _contexto.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        return View();
+    }
+    
+    
+    [HttpGet]
     public IActionResult Privacy()
     {
         return View();
     }
-
+    
+    [HttpGet]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
